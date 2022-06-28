@@ -1,0 +1,55 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Pressure Prediction</title>
+
+    <!-- <script type="text/javascript">
+        function numbersOnly(oToCheckField, oKeyEvent) {
+            return oKeyEvent.charCode === 0 || /\d/.test(String.fromCharCode(oKeyEvent.charCode));
+        }
+    </script> -->
+
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+
+
+    <body>
+        <header>
+            <h1>Blood Pressure Predictor</h1>
+        </header>
+        <main>
+            <form id="login_form" class="form_class" action="{{url_for('predict')}}"method="post">
+                <div class="form_div">
+                    <label>Age:</label>
+                    <input class="field_class" name="age" type="number" placeholder="Enter your age" autofocus>
+                    <label>Weight:</label>
+                    <input name="weight" class="field_class" type="number" placeholder="Enter your Weight(kgs)">
+                    <button class="submit_class" input type="submit" value="predict"
+                    style="background-color:#2048a0; width: 130px; height: 40px; color: white; font-size: 20px;">
+                    Predict</button>                 
+                 </div>
+                 <div>
+            {{msg}}
+        </div>
+                
+            </form>
+    
+        </main>
+        
+        <footer>
+            <p>Developed By Saran</p>
+        </footer>
+        
+    </body>
+    
+
+</html>
